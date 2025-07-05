@@ -88,28 +88,28 @@ function App() {
 
             <div className="bg-white shadow-sm border border-slate-200 rounded-xl p-6 text-slate-600">
               <h3 className="text-xl font-semibold mb-2 text-sky-700">Self-Hosting</h3>
-              <p>
-                Learning about and running services (like this website!) has been another passion of mine.
-                I've applied my skills and some previous knowledge to use Docker and Linux to host a variety of services, including things like file and media servers, 
-                <a
-                  href="https://www.home-assistant.io/"
-                  className="text-sky-600 hover:text-sky-800 underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  HomeAssistant
-                </a>, 
-
-                <a
-                  href="https://syncthing.net/"
-                  className="text-sky-600 hover:text-sky-800 underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Syncthing
-                </a>,
-                and more.
-              </p>
+                <p>
+                  Learning about and running services (like this website!) has been another passion of mine.
+                  I've applied my skills and some previous knowledge to use Docker and Linux to host a variety of services, including things like file and media servers, {" "}
+                  <a
+                    href="https://www.home-assistant.io/"
+                    className="text-sky-600 hover:text-sky-800 underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    HomeAssistant
+                  </a>
+                  ,{" "}
+                  <a
+                    href="https://syncthing.net/"
+                    className="text-sky-600 hover:text-sky-800 underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Syncthing
+                  </a>
+                  , and more.
+                </p>
             </div>
 
             <div className="bg-white shadow-sm border border-slate-200 rounded-xl p-6 text-slate-600">
