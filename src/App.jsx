@@ -135,13 +135,13 @@ function App() {
             aidan.c.mcleod[at]gmail.com
           </span>
           <a
-            href="https://www.linkedin.com/in/aidan-mcleod"
+            href="https://www.linkedin.com/in/aidan-c-mcleod"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 hover:text-sky-700"
           >
             <FaLinkedin className="text-lg" />
-            linkedin.com/in/aidan-mcleod
+            linkedin.com/in/aidan-c-mcleod
           </a>
         </div>
 
