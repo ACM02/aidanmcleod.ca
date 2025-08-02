@@ -53,6 +53,12 @@ function App() {
               tech="Java, Git"
               githubLink="https://github.com/ACM02/sudoku"
             />
+            <ProjectCard
+              title="Star Simulator"
+              description="An astrophysics course project that simulates the internal structure of a star."
+              tech="Python, Scipy"
+              githubLink="https://github.com/ACM02/star-simulator"
+            />
           </div>
         </section>
 
