@@ -13,7 +13,7 @@ function App() {
             Aidan McLeod
           </h1>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            I'm a student at the University of Mantioba pursuing an honours degree in Computer Science minoring in Physics & Astronomy. 
+            I'm a student at the University of Mantioba pursuing an honours degree in Computer Science minoring in Physics & Astronomy.
             I enjoy solving real-world problems with code, from web to embedded systems and whatever else I happen to come across.
           </p>
         </section>
@@ -43,7 +43,7 @@ function App() {
             />
             <ProjectCard
               title="XpBank"
-              description="Minecraft server plugin with 2,200+ downloads and 4.7★ rating, built using Java and Spigot API."
+              description="Minecraft server plugin with 2,700+ downloads and 4.7★ rating, built using Java and Spigot API."
               tech="Java, Spigot API, Git/GitHub"
               githubLink="https://www.spigotmc.org/resources/xpbank.101132/"
             />
@@ -87,45 +87,45 @@ function App() {
             <div className="bg-white shadow-sm border border-slate-200 rounded-xl p-6 text-slate-600">
               <h3 className="text-xl font-semibold mb-2 text-sky-700">Physics</h3>
               <p>
-                I am fascinated with learning more and more about the world around me which has inspired a love of learning physics. 
+                I am fascinated with learning more and more about the world around me which has inspired a love of learning physics.
                 As a part of my physics minor I've taken courses regarding computational modelling and astrophysics which have led me to create several projects modelling physical interactions and solving tough problems.
               </p>
             </div>
 
             <div className="bg-white shadow-sm border border-slate-200 rounded-xl p-6 text-slate-600">
               <h3 className="text-xl font-semibold mb-2 text-sky-700">Self-Hosting</h3>
-                <p>
-                  Learning about and running services (like this website!) has been another passion of mine.
-                  I've applied my skills and some previous knowledge to use Docker and Linux to host a variety of services, including things like file and media servers, {" "}
-                  <a
-                    href="https://www.home-assistant.io/"
-                    className="text-sky-600 hover:text-sky-800 underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    HomeAssistant
-                  </a>
-                  ,{" "}
-                  <a
-                    href="https://syncthing.net/"
-                    className="text-sky-600 hover:text-sky-800 underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Syncthing
-                  </a>
-                  , and more.
-                </p>
+              <p>
+                Learning about and running services (like this website!) has been another passion of mine.
+                I've applied my skills and some previous knowledge to use Docker and Linux to host a variety of services, including things like file and media servers, {" "}
+                <a
+                  href="https://www.home-assistant.io/"
+                  className="text-sky-600 hover:text-sky-800 underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  HomeAssistant
+                </a>
+                ,{" "}
+                <a
+                  href="https://syncthing.net/"
+                  className="text-sky-600 hover:text-sky-800 underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Syncthing
+                </a>
+                , and more.
+              </p>
             </div>
 
             <div className="bg-white shadow-sm border border-slate-200 rounded-xl p-6 text-slate-600">
               <h3 className="text-xl font-semibold mb-2 text-sky-700">Martial Arts & Jazz</h3>
-                <p>
-                  I've been deeply involved in both martial arts and music for most of my life. 
-                  Training in karate for over 15 years has taught me patience, focus, and the value of long-term discipline. 
-                  In parallel, playing jazz for 7+ years has given me a creative outlet and taught me how to listen, adapt, and express myself. 
-                  Both have shaped the way I approach challenges and personal growth.
-                </p>
+              <p>
+                I've been deeply involved in both martial arts and music for most of my life.
+                Training in karate for over 15 years has taught me patience, focus, and the value of long-term discipline.
+                In parallel, playing jazz for 7+ years has given me a creative outlet and taught me how to listen, adapt, and express myself.
+                Both have shaped the way I approach challenges and personal growth.
+              </p>
             </div>
           </div>
         </section>
