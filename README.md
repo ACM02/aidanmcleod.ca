@@ -19,10 +19,10 @@ You can view it live here: [aidanmcleod.ca](https://aidanmcleod.ca)
 
 ```bash
 # Clone the repo
-git clone https://github.com/aidan-mcleod/aidan-mcleod.dev.git
+git clone https://github.com/ACM02/aidan-mcleod.ca.git
 
 # Navigate into the project directory
-cd aidan-mcleod.dev
+cd aidan-mcleod.ca
 
 # Install dependencies
 npm install
