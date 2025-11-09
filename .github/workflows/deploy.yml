@@ -1,0 +1,47 @@
+name: Build and Deploy Website to NGINX
+
+on:
+  workflow_dispatch:  # allows manual GitHub triggering
+  push:
+    branches:
+      - release  # trigger on release branch pushes
+
+jobs:
+  build-and-deploy:
+    name: Build and Deploy Static Site
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 23
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site
+        run: npm run build
+
+      - name: Deploy to NGINX web directory
+        run: |
+          echo "Starting deployment..."
+
+          WEB_DIR=~/testing/web_content
+          BUILD_DIR=./target
+
+          # Make sure the target folder exists
+          mkdir -p "$WEB_DIR"
+
+          # Create a temporary directory for safe atomic updates
+          TEMP_DIR=$(mktemp -d)
+          cp -r "$BUILD_DIR"/* "$TEMP_DIR"/
+
+          # Replace old content
+          rm -rf "$WEB_DIR"/*
+          cp -r "$TEMP_DIR"/* "$WEB_DIR"/
+
+          # TODO: Adjust permissions if necessary
