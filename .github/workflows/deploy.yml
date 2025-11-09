@@ -1,4 +1,4 @@
-name: Build and Deploy Website to NGINX
+name: Build and Deploy Website
 
 on:
   workflow_dispatch:  # allows manual GitHub triggering
@@ -43,5 +43,3 @@ jobs:
           # Replace old content
           rm -rf "$WEB_DIR"/*
           cp -r "$TEMP_DIR"/* "$WEB_DIR"/
-
-          # TODO: Adjust permissions if necessary
