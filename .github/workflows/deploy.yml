@@ -30,7 +30,7 @@ jobs:
         run: |
           echo "Starting deployment..."
 
-          WEB_DIR=~/testing/web_content
+          WEB_DIR=~/docker-apps/nginx-webserver/data/website-content
           BUILD_DIR=./dist
 
           # Make sure the target folder exists
