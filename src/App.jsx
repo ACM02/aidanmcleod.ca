@@ -13,7 +13,7 @@ function App() {
             Aidan McLeod
           </h1>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            I'm a student at the University of Mantioba pursuing an honours degree in Computer Science minoring in Physics & Astronomy.
+            I am a student at the University of Mantioba pursuing an honours degree in Computer Science minoring in Physics & Astronomy.
             I enjoy solving real-world problems with code, from web to embedded systems and whatever else I happen to come across.
           </p>
         </section>
