@@ -31,7 +31,7 @@ jobs:
           echo "Starting deployment..."
 
           WEB_DIR=~/testing/web_content
-          BUILD_DIR=./target
+          BUILD_DIR=./dist
 
           # Make sure the target folder exists
           mkdir -p "$WEB_DIR"
