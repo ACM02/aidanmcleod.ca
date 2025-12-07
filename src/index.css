@@ -2,3 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 🌌 Solar System Animation */
+.solar-system {
+    position: relative;
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px dashed rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orbit1 {
+    width: 150px;
+    height: 150px;
+}
+
+.planet-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+}
+
+.planet1-container {
+    animation: orbit1-move 12s linear infinite;
+    transform: translate(-50%, -50%) rotate(0deg) translateX(75px);
+    /* half of orbit1 radius (150/2) */
+}
+
+
+.planet {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+}
+
+.planet1 {
+    width: 12px;
+    height: 12px;
+    background-color: #3b82f6;
+    box-shadow: 0 0 10px 2px rgba(59, 130, 246, 0.6);
+}
+
+/* Individual orbit animations */
+@keyframes orbit1-move {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
