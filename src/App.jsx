@@ -83,7 +83,7 @@ function App() {
               title="Self-Hosted Infrastructure"
               description={
                 <>
-                  A collection of dockerized services running on my home server, including file synchronization with
+                  A collection of dockerized services running on my home server, including file synchronization with{' '}
                   <a
                     href="https://syncthing.net/"
                     className={`underline ${isDark ? 'text-purple-400 hover:text-purple-300' : 'text-sky-600 hover:text-sky-800'}`}
@@ -154,7 +154,7 @@ function App() {
             Gravity game
           </h2>
           <p className={`mb-4 ${isDark ? 'text-slate-300' : 'text-slate-600'}`}>
-            You made it to the end! There's no prize but here's a little gravity sanbox to play with.
+            You made it to the end! There's no prize but here's a little gravity sandbox to play with.
             <br />
             Click to add bodies, press "Start" to see them interact gravitationally.
           </p>
