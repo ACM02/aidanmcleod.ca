@@ -1,21 +1,16 @@
 # aidanmcleod.ca
 
-This is my personal portfolio website, built with React and Tailwind CSS. It showcases my work, technical skills, and interests, as well as some background about who I am beyond the code.
+Welcome to my personal portfolio website! I made this site so I can showcase my projects, technical skills, and interests, as well as exercise my creativity and learn more about web hosting.
 
-You can view it live here: [aidanmcleod.ca](https://aidanmcleod.ca)
+You can view the site live here: [aidanmcleod.ca](https://aidanmcleod.ca)
 
----
+## Tech Stack
 
-## 🚀 Tech Stack
+The site is build using [React](https://reactjs.org/) with [Tailwind CSS](https://tailwindcss.com/) styling to keep it simple and easy for me to work on.
 
-- [React](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [React Icons](https://react-icons.github.io/react-icons/)
+## Development
 
----
-
-## 📁 Getting Started
+To work on the website, you'll need Node.js and npm installed ([guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)), then you can clone and run it.
 
 ```bash
 # Clone the repo
