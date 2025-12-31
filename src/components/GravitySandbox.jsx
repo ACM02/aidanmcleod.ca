@@ -5,6 +5,16 @@ function GravitySandbox({ isDark }) {
   const bodiesRef = useRef([]);
   const [isRunning, setIsRunning] = useState(false);
 
+
+  const dragRef = useRef({
+    isDragging: false,
+    startX: 0,
+    startY: 0,
+    offsetX: 0,
+    offsetY: 0,
+    bodyToAdd: null
+  });
+
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
@@ -13,26 +23,80 @@ function GravitySandbox({ isDark }) {
 
     const G = 0.5;
 
-    const handleClick = (e) => {
+    const handleMouseDown = (e) => {
+      e.preventDefault();
+      if (dragRef.current.isDragging) {
+        handleMouseUp(e);
+      } else {
+        const rect = canvas.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        console.log("Mousedown at", x, y);
+        dragRef.current.isDragging = true;
+        dragRef.current.startX = x;
+        dragRef.current.startY = y;
+
+        dragRef.current.bodyToAdd = {
+          x, y,
+          vx: 0, vy: 0,
+          mass: Math.random() * 20 + 10,
+          radius: Math.random() * 8 + 4,
+          color: `hsl(${Math.random() * 60 + 200}, 70%, 60%)`,
+          trail: []
+        };
+      }
+    };
+
+    const handleMouseMove = (e) => {
+      if (!dragRef.current.isDragging) return;
       const rect = canvas.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
+      dragRef.current.offsetX = x - dragRef.current.startX;
+      dragRef.current.offsetY = y - dragRef.current.startY;
+    }
 
-      bodiesRef.current.push({
-        x, y,
-        vx: 0, vy: 0,
-        mass: Math.random() * 20 + 10,
-        radius: Math.random() * 8 + 4,
-        color: `hsl(${Math.random() * 60 + 200}, 70%, 60%)`,
-        trail: []
-      });
-    };
+    const handleMouseUp = (e) => {
 
-    canvas.addEventListener('click', handleClick);
+      if (!dragRef.current.isDragging) {
+        return;
+      }
+
+      if (dragRef.current.bodyToAdd) {
+        // Set initial velocity based on drag distance
+        dragRef.current.bodyToAdd.vx = dragRef.current.offsetX * -0.005;
+        dragRef.current.bodyToAdd.vy = dragRef.current.offsetY * -0.005;
+        bodiesRef.current.push(dragRef.current.bodyToAdd);
+        dragRef.current.bodyToAdd = null;
+      }
+      dragRef.current.isDragging = false;
+      dragRef.current.offsetX = 0;
+      dragRef.current.offsetY = 0;
+    }
+
+    canvas.addEventListener('pointerdown', handleMouseDown);
+    canvas.addEventListener('pointermove', handleMouseMove);
+    canvas.addEventListener('pointerup', handleMouseUp);
 
     let animationId;
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      if (dragRef.current.bodyToAdd) {
+        // Draw line for velocity indication
+        ctx.strokeStyle = '#cbd5e19d';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(dragRef.current.bodyToAdd.x, dragRef.current.bodyToAdd.y);
+        ctx.lineTo(dragRef.current.bodyToAdd.x + dragRef.current.offsetX, dragRef.current.bodyToAdd.y + dragRef.current.offsetY);
+        ctx.stroke();
+
+
+        ctx.beginPath();
+        ctx.arc(dragRef.current.bodyToAdd.x, dragRef.current.bodyToAdd.y, dragRef.current.bodyToAdd.radius, 0, Math.PI * 2);
+        ctx.fillStyle = dragRef.current.bodyToAdd.color;
+        ctx.fill();
+      }
 
       if (isRunning && bodiesRef.current.length > 0) {
         // Calculate forces and update positions
@@ -117,7 +181,9 @@ function GravitySandbox({ isDark }) {
     animate();
 
     return () => {
-      canvas.removeEventListener('click', handleClick);
+      canvas.removeEventListener('pointerdown', handleMouseDown);
+      canvas.removeEventListener('pointermove', handleMouseMove);
+      canvas.removeEventListener('pointerup', handleMouseUp);
       cancelAnimationFrame(animationId);
     };
   }, [isRunning, isDark]);
