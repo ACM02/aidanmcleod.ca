@@ -1,6 +1,6 @@
 services:
   nginx:
-    image: aidancmcleod/aidanmcleod.ca
+    image: aidancmcleod/aidanmcleod.ca:release
     container_name: aidanmcleod.ca
     restart: unless-stopped
     ports:
