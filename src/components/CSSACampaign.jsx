@@ -1,4 +1,4 @@
-import { FaServer, FaUsers, FaTools, FaCode, FaRocket, FaCheckCircle, FaRobot, FaTv } from 'react-icons/fa';
+import { FaServer, FaUsers, FaTools, FaCode, FaRobot, FaTv } from 'react-icons/fa';
 import { FaBowlFood } from 'react-icons/fa6';
 
 const CSSACampaign = ({ isDark }) => {

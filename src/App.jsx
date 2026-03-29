@@ -28,32 +28,6 @@ function App() {
         }`} style={{ position: 'relative' }}>
         <StarField isDark={isDark} />
 
-        <nav className="fixed top-6 left-6 flex gap-3" style={{ zIndex: 100 }}>
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `px-4 py-2 rounded-lg font-bold transition-all ${isActive
-                ? (isDark ? 'bg-purple-600 text-white shadow-lg' : 'bg-sky-600 text-white shadow-md')
-                : (isDark ? 'text-slate-400 hover:bg-slate-800' : 'text-slate-600 hover:bg-white/80 shadow-sm')
-              }`
-            }
-          >
-            Portfolio
-          </NavLink>
-
-          <NavLink
-            to="/cssa"
-            className={({ isActive }) =>
-              `px-4 py-2 rounded-lg font-bold transition-all ${isActive
-                ? (isDark ? 'bg-purple-600 text-white shadow-lg' : 'bg-sky-600 text-white shadow-md')
-                : (isDark ? 'text-slate-400 hover:bg-slate-800' : 'text-slate-600 hover:bg-white/80 shadow-sm')
-              }`
-            }
-          >
-            2026 CSSA Election
-          </NavLink>
-        </nav>
-
         <button
           onClick={toggleTheme}
           className={`fixed top-6 right-6 p-3 rounded-full transition-all hover:scale-110 ${isDark
@@ -72,10 +46,6 @@ function App() {
             <Route
               path="/"
               element={<Portfolio isDark={isDark} />}
-            />
-            <Route
-              path="/cssa"
-              element={<CSSACampaign isDark={isDark} />}
             />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
