@@ -25,6 +25,15 @@ const Portfolio = ({ isDark }) => {
           Projects
         </h2>
         <div className="grid md:grid-cols-2 gap-6">
+
+          <ProjectCard
+            title="CoApp"
+            description="A React web app designed for co-op students with job application/interview tracking, company reviews (like rate-my-professor), and AI resume improvement. Built as a software engineering course project on a 6 person team."
+            tech="React, SpringBoot, Docker, GitHub Actions"
+            link="https://github.com/Co-App-Team"
+            isDark={isDark}
+          />
+
           <ProjectCard
             title="Imagine"
             description="A game about pushing a rock up a hill, inspired by the myth of Sisyphus and representing the struggles people face with mental health. Built in 40 hours for the 2025 CSSA Game Jam. Won 'Best Overall Game'."
@@ -65,7 +74,7 @@ const Portfolio = ({ isDark }) => {
 
           <ProjectCard
             title="XpBank"
-            description="A Minecraft server plugin with 2,700+ downloads and a 4.7★ rating. I've maintained this project and provided support for server owners worldwide for over two years."
+            description="A Minecraft server plugin with 2,900+ downloads and a 4.7★ rating. I've maintained this project and provided support for server owners worldwide for over two years."
             tech="Java, Spigot API"
             link="https://www.spigotmc.org/resources/xpbank.101132/"
             isDark={isDark}
