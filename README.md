@@ -14,10 +14,10 @@ To work on the website, you'll need Node.js and npm installed ([guide](https://d
 
 ```bash
 # Clone the repo
-git clone https://github.com/ACM02/aidan-mcleod.ca.git
+git clone https://github.com/ACM02/aidanmcleod.ca.git
 
 # Navigate into the project directory
-cd aidan-mcleod.ca
+cd aidanmcleod.ca
 
 # Install dependencies
 npm install
