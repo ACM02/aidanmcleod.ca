@@ -31,7 +31,7 @@ function GravitySandbox({ isDark }) {
         const rect = canvas.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        console.log("Mousedown at", x, y);
+
         dragRef.current.isDragging = true;
         dragRef.current.startX = x;
         dragRef.current.startY = y;
