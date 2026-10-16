@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import StarField from './components/StarField.jsx';
 import { FaEnvelope, FaLinkedin, FaMoon, FaSun } from 'react-icons/fa';
-import CSSACampaign from './components/CSSACampaign.jsx';
 import Portfolio from './components/Portfolio.jsx';
-import { BrowserRouter, Navigate, NavLink, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
 
 function App() {
   const [isDark, setIsDark] = useState(true);
