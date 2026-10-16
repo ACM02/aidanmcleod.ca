@@ -66,7 +66,7 @@ function App() {
               href="https://www.linkedin.com/in/aidan-c-mcleod"
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-flex items-center gap-2 ${isDark ? 'hover:text-purple-400' : 'hover:text-sky-700'
+              className={`inline-flex items-center gap-2 ${isDark ? 'hover:text-primary' : 'hover:text-sky-700'
                 }`}
             >
               <FaLinkedin />

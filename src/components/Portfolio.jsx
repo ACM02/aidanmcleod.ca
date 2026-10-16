@@ -9,7 +9,7 @@ const Portfolio = ({ isDark }) => {
     <>
       {/* Intro */}
       <section className="text-center mt-8">
-        <h1 className={`text-7xl font-extrabold mb-6 tracking-wide ${isDark ? 'text-purple-400' : 'text-sky-700'
+        <h1 className={`text-7xl font-extrabold mb-6 tracking-wide ${isDark ? 'text-primary' : 'text-sky-700'
           }`}>
           Aidan McLeod
         </h1>
@@ -21,7 +21,7 @@ const Portfolio = ({ isDark }) => {
 
       {/* Projects */}
       <section>
-        <h2 className={`text-3xl font-bold mb-6 ${isDark ? 'text-purple-400' : 'text-sky-600'}`}>
+        <h2 className={`text-3xl font-bold mb-6 ${isDark ? 'text-primary' : 'text-sky-600'}`}>
           Projects
         </h2>
         <div className="grid md:grid-cols-2 gap-6">
@@ -60,7 +60,7 @@ const Portfolio = ({ isDark }) => {
                 A collection of dockerized services running on my home server, including file synchronization with{' '}
                 <a
                   href="https://syncthing.net/"
-                  className={`underline ${isDark ? 'text-purple-400 hover:text-purple-300' : 'text-sky-600 hover:text-sky-800'}`}
+                  className={`underline ${isDark ? 'text-primary hover:text-link-hover' : 'text-sky-600 hover:text-sky-800'}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -105,7 +105,7 @@ const Portfolio = ({ isDark }) => {
 
       {/* Interests */}
       <section>
-        <h2 className={`text-3xl font-bold mb-6 ${isDark ? 'text-purple-400' : 'text-sky-600'}`}>
+        <h2 className={`text-3xl font-bold mb-6 ${isDark ? 'text-primary' : 'text-sky-600'}`}>
           Other Stuff I'm Into
         </h2>
         <div className="grid md:grid-cols-2 gap-6">
@@ -124,7 +124,7 @@ const Portfolio = ({ isDark }) => {
 
       {/* Gravity Sandbox */}
       <section>
-        <h2 className={`text-3xl font-bold mb-6 ${isDark ? 'text-purple-400' : 'text-sky-600'}`}>
+        <h2 className={`text-3xl font-bold mb-6 ${isDark ? 'text-primary' : 'text-sky-600'}`}>
           Gravity game
         </h2>
         <p className={`mb-4 ${isDark ? 'text-slate-300' : 'text-slate-600'}`}>

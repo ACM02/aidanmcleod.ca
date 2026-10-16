@@ -2,7 +2,7 @@ import { FaServer, FaUsers, FaTools, FaCode, FaRobot, FaTv } from 'react-icons/f
 import { FaBowlFood } from 'react-icons/fa6';
 
 const CSSACampaign = ({ isDark }) => {
-  const sectionTitle = `text-3xl font-bold mb-8 ${isDark ? 'text-purple-400' : 'text-sky-600'}`;
+  const sectionTitle = `text-3xl font-bold mb-8 ${isDark ? 'text-primary' : 'text-sky-600'}`;
   const cardBg = isDark ? 'bg-slate-800/50 border-slate-700' : 'bg-white border-slate-200 shadow-sm';
 
   return (
@@ -10,7 +10,7 @@ const CSSACampaign = ({ isDark }) => {
 
       <section className="text-center">
         <h1 className={`text-6xl md:text-7xl font-black mb-6 tracking-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
-          Aidan <span className={isDark ? 'text-purple-400' : 'text-sky-600'}>McLeod</span>
+          Aidan <span className={isDark ? 'text-primary' : 'text-sky-600'}>McLeod</span>
         </h1>
         <p className="text-2xl font-bold uppercase tracking-widest opacity-80">for Director of Technology</p>
       </section>
@@ -73,7 +73,7 @@ const CSSACampaign = ({ isDark }) => {
 
 const PlatformCard = ({ icon, title, description, isDark }) => (
   <div className={`p-8 rounded-2xl border transition-all ${isDark ? 'bg-slate-800/50 border-slate-700 hover:border-purple-500/50' : 'bg-white border-slate-200 shadow-sm hover:border-sky-400'}`}>
-    <div className={`mb-4 text-3xl ${isDark ? 'text-purple-400' : 'text-sky-600'}`}>{icon}</div>
+    <div className={`mb-4 text-3xl ${isDark ? 'text-primary' : 'text-sky-600'}`}>{icon}</div>
     <h3 className="text-xl font-bold mb-2">{title}</h3>
     <p className={`text-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>{description}</p>
   </div>
@@ -81,7 +81,7 @@ const PlatformCard = ({ icon, title, description, isDark }) => (
 
 const RoadmapItem = ({ icon, title, text, isDark }) => (
   <div className={`flex items-start gap-4 p-5 rounded-xl border ${isDark ? 'bg-slate-800/30 border-slate-700' : 'bg-slate-50 border-slate-100'}`}>
-    <div className={`mt-1 ${isDark ? 'text-purple-400' : 'text-sky-600'}`}>{icon}</div>
+    <div className={`mt-1 ${isDark ? 'text-primary' : 'text-sky-600'}`}>{icon}</div>
     <div>
       <h4 className="font-bold">{title}</h4>
       <p className={`text-sm ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>{text}</p>

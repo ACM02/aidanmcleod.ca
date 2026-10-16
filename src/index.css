@@ -2,4 +2,7 @@
 
 @theme {
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: var(--color-purple-400);
+  --color-link-hover: var(--color-purple-300);
 }

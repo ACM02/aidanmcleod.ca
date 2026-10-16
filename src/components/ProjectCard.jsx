@@ -3,8 +3,8 @@ import { FaGithub } from "react-icons/fa";
 function ProjectCard({ title, description, tech, link, links, linkIcon = <FaGithub />, isDark }) {
   return (
     <div className={`relative rounded-xl p-6 transition-all hover:scale-[1.02] ${isDark
-        ? 'bg-slate-800 border border-slate-700 shadow-lg'
-        : 'bg-white border border-slate-200 shadow-sm'
+      ? 'bg-slate-800 border border-slate-700 shadow-lg'
+      : 'bg-white border border-slate-200 shadow-sm'
       }`}>
       {links ? (
         <div className="absolute top-4 right-4 flex gap-2">
@@ -14,7 +14,7 @@ function ProjectCard({ title, description, tech, link, links, linkIcon = <FaGith
               href={linkItem.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`transition-colors ${isDark ? 'text-purple-400 hover:text-purple-300' : 'text-sky-600 hover:text-sky-800'
+              className={`transition-colors ${isDark ? 'text-primary hover:text-link-hover' : 'text-sky-600 hover:text-sky-800'
                 }`}
               aria-label={linkItem.label || `Link ${index + 1} for ${title}`}
             >
@@ -27,7 +27,7 @@ function ProjectCard({ title, description, tech, link, links, linkIcon = <FaGith
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className={`absolute top-4 right-4 transition-colors ${isDark ? 'text-purple-400 hover:text-purple-300' : 'text-sky-600 hover:text-sky-800'
+          className={`absolute top-4 right-4 transition-colors ${isDark ? 'text-primary hover:text-link-hover' : 'text-sky-600 hover:text-sky-800'
             }`}
           aria-label={`Link for ${title}`}
         >

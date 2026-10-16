@@ -2,7 +2,7 @@ function Skills({ isDark }) {
   return (
     <>
 
-      <h2 className={`text-3xl font-bold mb-6 ${isDark ? 'text-purple-400' : 'text-sky-600'}`}>
+      <h2 className={`text-3xl font-bold mb-6 ${isDark ? 'text-primary' : 'text-sky-600'}`}>
         Skills
       </h2>
       <div className={`rounded-xl p-6 space-y-4 ${isDark
