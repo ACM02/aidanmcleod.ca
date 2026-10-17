@@ -1,11 +1,8 @@
 import { FaGithub } from "react-icons/fa";
 
-function ProjectCard({ title, description, tech, link, links, linkIcon = <FaGithub />, isDark }) {
+function ProjectCard({ title, description, tech, link, links, linkIcon = <FaGithub /> }) {
   return (
-    <div className={`relative rounded-xl p-6 transition-all hover:scale-[1.02] ${isDark
-      ? 'bg-secondary border border-slate-700 shadow-lg'
-      : 'bg-white border border-slate-200 shadow-sm'
-      }`}>
+    <div className={'relative rounded-xl p-6 transition-all hover:scale-[1.02] bg-secondary border border-secondary shadow-lg'}>
       {links ? (
         <div className="absolute top-4 right-4 flex gap-2">
           {links.map((linkItem, index) => (
@@ -14,8 +11,7 @@ function ProjectCard({ title, description, tech, link, links, linkIcon = <FaGith
               href={linkItem.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`transition-colors ${isDark ? 'text-primary hover:text-link-hover' : 'text-sky-600 hover:text-sky-800'
-                }`}
+              className={'transition-colors text-primary hover:text-link-hover'}
               aria-label={linkItem.label || `Link ${index + 1} for ${title}`}
             >
               <span className="text-2xl">{linkItem.icon}</span>
@@ -27,18 +23,17 @@ function ProjectCard({ title, description, tech, link, links, linkIcon = <FaGith
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className={`absolute top-4 right-4 transition-colors ${isDark ? 'text-primary hover:text-link-hover' : 'text-sky-600 hover:text-sky-800'
-            }`}
+          className={'absolute top-4 right-4 transition-colors text-primary hover:text-link-hover'}
           aria-label={`Link for ${title}`}
         >
           <span className="text-2xl">{linkIcon}</span>
         </a>
       ) : null}
-      <h3 className={`text-xl font-semibold mb-2 ${isDark ? 'text-slate-100' : 'text-slate-900'}`}>
+      <h3 className={'text-xl font-bold mb-2 text-text-primary'}>
         {title}
       </h3>
-      <p className={`mb-2 ${isDark ? 'text-slate-300' : 'text-slate-600'}`}>{description}</p>
-      <p className={`text-sm italic ${isDark ? 'text-text-tertiary' : 'text-text-tertiary'}`}>{tech}</p>
+      <p className={'mb-2 text-text-primary'}>{description}</p>
+      <p className={'text-sm italic text-text-tertiary'}>{tech}</p>
     </div>
   );
 }

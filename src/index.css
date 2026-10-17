@@ -3,10 +3,24 @@
 @theme {
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
 
+  --color-bg: var(--color-slate-900);
   --color-primary: var(--color-purple-400);
-  --color-link-hover: var(--color-purple-300);
   --color-secondary: var(--color-slate-800);
-  /* --color-text-primary: var(--color-slate-800); */
+  --color-link-hover: var(--color-purple-300);
+  --color-text-primary: var(--color-slate-300);
   --color-text-secondary: var(--color-slate-400);
   --color-text-tertiary: var(--color-slate-500);
+}
+
+/* TODO: Remove last few mentions of isDark */
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: var(--color-slate-50);
+    --color-primary: var(--color-sky-700);
+    --color-secondary: var(--color-slate-300);
+    --color-link-hover: var(--color-sky-800);
+    --color-text-primary: var(--color-slate-600);
+    --color-text-secondary: var(--color-slate-600);
+  }
 }

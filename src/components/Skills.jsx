@@ -1,35 +1,32 @@
-function Skills({ isDark }) {
+function Skills() {
   return (
     <>
 
-      <h2 className={`text-3xl font-bold mb-6 ${isDark ? 'text-primary' : 'text-sky-600'}`}>
+      <h2 className={'text-3xl font-bold mb-6 text-primary'}>
         Skills
       </h2>
-      <div className={`rounded-xl p-6 space-y-4 ${isDark
-        ? 'bg-secondary border border-slate-700'
-        : 'bg-white border border-slate-200 shadow-sm'
-        }`}>
+      <div className={'rounded-xl p-6 space-y-4 bg-secondary'}>
         <div>
-          <p className={`font-semibold ${isDark ? 'text-slate-200' : 'text-slate-800'}`}>
+          <p className={'font-semibold text-text-primary'}>
             Languages
           </p>
-          <p className={isDark ? 'text-text-secondary' : 'text-slate-600'}>
+          <p className={'text-text-secondary'}>
             C/C++, JavaScript, Java, Ruby, Python, C#, HTML/CSS
           </p>
         </div>
         <div>
-          <p className={`font-semibold ${isDark ? 'text-slate-200' : 'text-slate-800'}`}>
+          <p className={'font-semibold text-text-primary'}>
             Frameworks & Libraries
           </p>
-          <p className={isDark ? 'text-text-secondary' : 'text-slate-600'}>
+          <p className={'text-text-secondary'}>
             ESP-IDF, React, React Native, Ruby on Rails, Spring Boot, Next.js, Arduino
           </p>
         </div>
         <div>
-          <p className={`font-semibold ${isDark ? 'text-slate-200' : 'text-slate-800'}`}>
+          <p className={'font-semibold text-text-primary'}>
             Tools
           </p>
-          <p className={isDark ? 'text-text-secondary' : 'text-slate-600'}>
+          <p className={'text-text-secondary'}>
             Docker, Git/GitHub, Linux, Maven, PlatformIO, Nginx
           </p>
         </div>
