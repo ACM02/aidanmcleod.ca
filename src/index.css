@@ -5,4 +5,8 @@
 
   --color-primary: var(--color-purple-400);
   --color-link-hover: var(--color-purple-300);
+  --color-secondary: var(--color-slate-800);
+  /* --color-text-primary: var(--color-slate-800); */
+  --color-text-secondary: var(--color-slate-400);
+  --color-text-tertiary: var(--color-slate-500);
 }

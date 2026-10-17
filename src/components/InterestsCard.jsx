@@ -5,7 +5,7 @@ function InterestsCard({
 }) {
   return (
     <div className={`rounded-xl p-6 hover:scale-[1.02] transition-all ${isDark
-      ? 'bg-slate-800 border border-slate-700'
+      ? 'bg-secondary border border-slate-700'
       : 'bg-white border border-slate-200 shadow-sm'
       }`}>
       <h3 className={`text-xl font-semibold mb-2 ${isDark ? 'text-primary' : 'text-sky-700'

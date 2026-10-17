@@ -30,7 +30,7 @@ function App() {
         <button
           onClick={toggleTheme}
           className={`fixed top-6 right-6 p-3 rounded-full transition-all hover:scale-110 ${isDark
-            ? 'bg-slate-800 text-yellow-300 hover:bg-slate-700'
+            ? 'bg-secondary text-yellow-300 hover:bg-slate-700'
             : 'bg-white text-slate-700 hover:bg-slate-100 shadow-md'
             }`}
           style={{ zIndex: 100 }}
@@ -51,7 +51,7 @@ function App() {
         </main>
 
         {/* Footer */}
-        <footer className={`mt-24 border-t pt-8 pb-12 text-center text-sm space-y-4 ${isDark ? 'border-slate-800 text-slate-400' : 'border-slate-200 text-slate-600'
+        <footer className={`mt-24 border-t pt-8 pb-12 text-center text-sm space-y-4 ${isDark ? 'border-secondary text-text-secondary' : 'border-slate-200 text-slate-600'
           }`} style={{ position: 'relative', zIndex: 1 }}>
           <p className="max-w-xl mx-auto px-4">
             If you'd like to discuss my work or have any questions, feel free to reach out via email or LinkedIn.

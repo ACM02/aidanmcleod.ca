@@ -208,7 +208,7 @@ function GravitySandbox({ isDark }) {
           onClick={handleClear}
           className={`px-4 py-2 rounded-lg font-medium transition-colors ${isDark
             ? 'bg-slate-700 hover:bg-slate-600 text-white'
-            : 'bg-slate-300 hover:bg-slate-400 text-slate-800'
+            : 'bg-slate-300 hover:bg-slate-400 text-secondary'
             }`}
         >
           Clear
@@ -216,7 +216,7 @@ function GravitySandbox({ isDark }) {
       </div>
       <canvas
         ref={canvasRef}
-        className={`w-full rounded-xl border-2 cursor-crosshair ${isDark ? 'bg-slate-800 border-slate-700' : 'bg-slate-50 border-slate-300'
+        className={`w-full rounded-xl border-2 cursor-crosshair ${isDark ? 'bg-secondary border-slate-700' : 'bg-slate-50 border-slate-300'
           }`}
         style={{ height: '400px' }}
       />

@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 function ProjectCard({ title, description, tech, link, links, linkIcon = <FaGithub />, isDark }) {
   return (
     <div className={`relative rounded-xl p-6 transition-all hover:scale-[1.02] ${isDark
-      ? 'bg-slate-800 border border-slate-700 shadow-lg'
+      ? 'bg-secondary border border-slate-700 shadow-lg'
       : 'bg-white border border-slate-200 shadow-sm'
       }`}>
       {links ? (
@@ -38,7 +38,7 @@ function ProjectCard({ title, description, tech, link, links, linkIcon = <FaGith
         {title}
       </h3>
       <p className={`mb-2 ${isDark ? 'text-slate-300' : 'text-slate-600'}`}>{description}</p>
-      <p className={`text-sm italic ${isDark ? 'text-slate-500' : 'text-slate-500'}`}>{tech}</p>
+      <p className={`text-sm italic ${isDark ? 'text-text-tertiary' : 'text-text-tertiary'}`}>{tech}</p>
     </div>
   );
 }
