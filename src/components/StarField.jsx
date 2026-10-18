@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-function StarField({ isDark }) {
+const StarField = () => {
   const canvasRef = useRef(null);
   const starsRef = useRef([]);
   const mouseRef = useRef({ x: 0, y: 0 });
@@ -34,6 +34,7 @@ function StarField({ isDark }) {
     let animationId;
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = getComputedStyle(root).getPropertyValue('--color-star').trim();
 
       starsRef.current.forEach(star => {
         // Twinkle effect
@@ -58,12 +59,11 @@ function StarField({ isDark }) {
 
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-        ctx.fillStyle = isDark
-          ? `rgba(147, 197, 253, ${star.opacity * twinkle})`
-          : `rgba(14, 165, 233, ${star.opacity * twinkle})`;
+        ctx.globalAlpha = star.opacity * twinkle;
         ctx.fill();
       });
 
+      ctx.globalAlpha = 1;
       animationId = requestAnimationFrame(animate);
     };
     animate();
@@ -78,13 +78,13 @@ function StarField({ isDark }) {
       window.removeEventListener('mousemove', handleMouseMove);
       cancelAnimationFrame(animationId);
     };
-  }, [isDark]);
+  }, []);
 
   return (
     <canvas
       ref={canvasRef}
       className="fixed top-0 left-0 w-full h-full pointer-events-none"
-      style={{ opacity: isDark ? 0.6 : 0.5, zIndex: 0 }}
+      style={{ opacity: 0.6, zIndex: 0 }}
     />
   );
 }

@@ -1,10 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 
-function GravitySandbox({ isDark }) {
+const GravitySandbox = () => {
   const canvasRef = useRef(null);
   const bodiesRef = useRef([]);
   const [isRunning, setIsRunning] = useState(false);
 
+  const cssVar = (name) =>
+    getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+  const lineColor = cssVar('--color-text-tertiary');
+  const outlineColor = cssVar('--color-secondary');
 
   const dragRef = useRef({
     isDragging: false,
@@ -84,7 +89,7 @@ function GravitySandbox({ isDark }) {
 
       if (dragRef.current.bodyToAdd) {
         // Draw line for velocity indication
-        ctx.strokeStyle = '#cbd5e19d';
+        ctx.strokeStyle = lineColor;
         ctx.lineWidth = 2;
         ctx.beginPath();
         ctx.moveTo(dragRef.current.bodyToAdd.x, dragRef.current.bodyToAdd.y);
@@ -159,7 +164,7 @@ function GravitySandbox({ isDark }) {
           ctx.arc(body.x, body.y, body.radius, 0, Math.PI * 2);
           ctx.fillStyle = body.color;
           ctx.fill();
-          ctx.strokeStyle = isDark ? '#1e293b' : '#cbd5e1';
+          ctx.strokeStyle = outlineColor;
           ctx.lineWidth = 2;
           ctx.stroke();
         });
@@ -170,7 +175,7 @@ function GravitySandbox({ isDark }) {
           ctx.arc(body.x, body.y, body.radius, 0, Math.PI * 2);
           ctx.fillStyle = body.color;
           ctx.fill();
-          ctx.strokeStyle = isDark ? '#1e293b' : '#cbd5e1';
+          ctx.strokeStyle = outlineColor;
           ctx.lineWidth = 2;
           ctx.stroke();
         });
@@ -186,7 +191,7 @@ function GravitySandbox({ isDark }) {
       canvas.removeEventListener('pointerup', handleMouseUp);
       cancelAnimationFrame(animationId);
     };
-  }, [isRunning, isDark]);
+  }, [isRunning,]);
 
   const handleClear = () => {
     bodiesRef.current = [];
@@ -197,27 +202,20 @@ function GravitySandbox({ isDark }) {
       <div className="flex gap-3 flex-wrap">
         <button
           onClick={() => setIsRunning(!isRunning)}
-          className={`px-4 py-2 rounded-lg font-medium transition-colors ${isDark
-            ? 'bg-purple-600 hover:bg-purple-700 text-white'
-            : 'bg-blue-500 hover:bg-blue-600 text-white'
-            }`}
+          className={'px-4 py-2 rounded-lg font-medium transition-colors bg-btn hover:bg-btn-hover text-text-primary'}
         >
           {isRunning ? 'Pause' : 'Start'}
         </button>
         <button
           onClick={handleClear}
-          className={`px-4 py-2 rounded-lg font-medium transition-colors ${isDark
-            ? 'bg-slate-700 hover:bg-slate-600 text-white'
-            : 'bg-slate-300 hover:bg-slate-400 text-slate-800'
-            }`}
+          className={'px-4 py-2 rounded-lg font-medium transition-colors bg-btn-secondary hover:bg-btn-secondary-hover text-text-primary'}
         >
           Clear
         </button>
       </div>
       <canvas
         ref={canvasRef}
-        className={`w-full rounded-xl border-2 cursor-crosshair ${isDark ? 'bg-slate-800 border-slate-700' : 'bg-slate-50 border-slate-300'
-          }`}
+        className={'w-full rounded-xl border-2 cursor-crosshair bg-secondary border-secondary'}
         style={{ height: '400px' }}
       />
 
