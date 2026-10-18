@@ -4,7 +4,7 @@ import InterestsCard from "./InterestsCard";
 import ProjectCard from "./ProjectCard";
 import Skills from "./Skills";
 
-const Portfolio = ({ isDark }) => {
+const Portfolio = () => {
   return (
     <>
       {/* Intro */}
@@ -121,7 +121,7 @@ const Portfolio = ({ isDark }) => {
           <br />
           Click to add bodies, press "Start" to see them interact gravitationally.
         </p>
-        <GravitySandbox isDark={isDark} />
+        <GravitySandbox />
       </section>
     </>
   );

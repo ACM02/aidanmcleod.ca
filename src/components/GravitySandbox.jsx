@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-function GravitySandbox({ isDark }) {
+const GravitySandbox = () => {
   const canvasRef = useRef(null);
   const bodiesRef = useRef([]);
   const [isRunning, setIsRunning] = useState(false);
@@ -191,7 +191,7 @@ function GravitySandbox({ isDark }) {
       canvas.removeEventListener('pointerup', handleMouseUp);
       cancelAnimationFrame(animationId);
     };
-  }, [isRunning, isDark]);
+  }, [isRunning,]);
 
   const handleClear = () => {
     bodiesRef.current = [];
@@ -202,19 +202,13 @@ function GravitySandbox({ isDark }) {
       <div className="flex gap-3 flex-wrap">
         <button
           onClick={() => setIsRunning(!isRunning)}
-          className={`px-4 py-2 rounded-lg font-medium transition-colors ${isDark
-            ? 'bg-purple-600 hover:bg-purple-700 text-white'
-            : 'bg-blue-500 hover:bg-blue-600 text-white'
-            }`}
+          className={'px-4 py-2 rounded-lg font-medium transition-colors bg-btn hover:bg-btn-hover text-text-primary'}
         >
           {isRunning ? 'Pause' : 'Start'}
         </button>
         <button
           onClick={handleClear}
-          className={`px-4 py-2 rounded-lg font-medium transition-colors ${isDark
-            ? 'bg-slate-700 hover:bg-slate-600 text-white'
-            : 'bg-text-primary hover:bg-slate-400 text-secondary'
-            }`}
+          className={'px-4 py-2 rounded-lg font-medium transition-colors bg-btn-secondary hover:bg-btn-secondary-hover text-text-primary'}
         >
           Clear
         </button>

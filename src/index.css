@@ -10,17 +10,25 @@
   --color-text-primary: var(--color-slate-300);
   --color-text-secondary: var(--color-slate-400);
   --color-text-tertiary: var(--color-slate-500);
+  --color-star: var(--color-blue-300);
+  --color-btn: var(--color-purple-600);
+  --color-btn-hover: var(--color-purple-700);
+  --color-btn-secondary: var(--color-slate-700);
+  --color-btn-secondary-hover: var(--color-slate-600);
 }
-
-/* TODO: Remove last few mentions of isDark */
 
 @media (prefers-color-scheme: light) {
   :root {
     --color-bg: var(--color-slate-50);
-    --color-primary: var(--color-sky-700);
+    --color-primary: var(--color-sky-600);
     --color-secondary: var(--color-slate-300);
     --color-link-hover: var(--color-sky-800);
-    --color-text-primary: var(--color-slate-600);
+    --color-text-primary: var(--color-slate-700);
     --color-text-secondary: var(--color-slate-600);
+    --color-star: var(--color-sky-500);
+    --color-btn: var(--color-blue-500);
+    --color-btn-hover: var(--color-blue-600);
+    --color-btn-secondary: var(--color-slate-300);
+    --color-btn-secondary-hover: var(--color-slate-400);
   }
 }

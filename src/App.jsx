@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import StarField from './components/StarField.jsx';
 import { FaEnvelope, FaLinkedin } from 'react-icons/fa';
 import Portfolio from './components/Portfolio.jsx';
@@ -8,14 +7,14 @@ function App() {
   return (
     <BrowserRouter>
       <div className={'min-h-screen transition-colors duration-300 bg-bg'} style={{ position: 'relative' }}>
-        <StarField isDark={true} />
+        <StarField />
 
         <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20" style={{ position: 'relative', zIndex: 1 }}>
 
           <Routes>
             <Route
               path="/"
-              element={<Portfolio isDark={true} />}
+              element={<Portfolio />}
             />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
